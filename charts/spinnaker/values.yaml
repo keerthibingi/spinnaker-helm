@@ -12,7 +12,7 @@ halyard:
     enabled: false
     secretName: opsmx-gitops-auth
     repo:
-      type: git # git, bitbucket-stash or S3, please use another template for github/stash
+      type: git # git, stash or S3, please use another template for github/stash
       s3accesskey:  S3_ACCESS_KEY
       s3secretkey: S3_SECRET_KEY
       s3bucket: S3_BUCKET_NAME
@@ -29,10 +29,10 @@ halyard:
       username: GIT_USERNAME  # Username to authenticate with git/stash repo
       token: GIT_TOKEN
   # If spinnakerVersion is not specified appVersion in Chart.yml is chosen for Spinnaker
-  spinnakerVersion: 1.30.1
+  spinnakerVersion: 1.33.0
   image:
     repository: us-docker.pkg.dev/spinnaker-community/docker/halyard
-    tag: 1.45.0
+    tag: 1.51.0
     pullSecrets: []
   # Set to false to disable persistence data volume for halyard
   persistence:
